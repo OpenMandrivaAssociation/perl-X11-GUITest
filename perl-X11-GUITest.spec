@@ -30,7 +30,11 @@ GTK+, Xt, Qt, Motif, etc.) that "wrap" the X library's functionality.
 %make
 
 %check
-make test
+if [ x${DISPLAY} != 'x' ]; then 
+    make test
+else
+    exit 0
+fi
 
 %install
 rm -rf %buildroot
