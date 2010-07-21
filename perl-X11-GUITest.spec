@@ -11,9 +11,11 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/X11/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl-devel
 BuildRequires: libx11-devel
+BuildRequires: perl-devel
 BuildRequires: x11-proto-devel
+BuildRequires: libxtst-devel
+
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
