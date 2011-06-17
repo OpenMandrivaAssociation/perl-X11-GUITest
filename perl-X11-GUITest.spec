@@ -1,5 +1,5 @@
 %define upstream_name    X11-GUITest
-%define upstream_version 0.24
+%define upstream_version 0.25
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -47,7 +47,7 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc README
+%doc docs/*
 %{_mandir}/man3/*
 %perl_vendorlib/*
 
