@@ -1,22 +1,21 @@
-%define upstream_name    X11-GUITest
+%define upstream_name X11-GUITest
 %define upstream_version 0.25
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
 Release:	2
 
-Summary:    Provides GUI testing/interaction facilities
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/X11/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Provides GUI testing/interaction facilities
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/X11/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl-devel
-BuildRequires: x11-proto-devel
-BuildRequires: libx11-devel
-BuildRequires: libxtst-devel
-BuildRequires: libxt-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	x11-proto-devel
+BuildRequires:	libx11-devel
+BuildRequires:	libxtst-devel
+BuildRequires:	libxt-devel
 
 %description
 This Perl package is intended to facilitate the testing of GUI applications
@@ -28,7 +27,7 @@ GTK+, Xt, Qt, Motif, etc.) that "wrap" the X library's functionality.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -39,16 +38,9 @@ else
 fi
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc docs/*
 %{_mandir}/man3/*
-%perl_vendorlib/*
-
-
+%{perl_vendorlib}/*
