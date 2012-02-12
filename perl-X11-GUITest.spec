@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(xextproto)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xtst)
 BuildRequires:	pkgconfig(xt)
+BuildRequires;	pkgconfig(xi)
 
 %description
 This Perl package is intended to facilitate the testing of GUI applications
