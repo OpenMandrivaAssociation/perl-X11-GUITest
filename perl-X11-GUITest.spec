@@ -12,10 +12,10 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/X11/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
-BuildRequires:	x11-proto-devel
-BuildRequires:	libx11-devel
-BuildRequires:	libxtst-devel
-BuildRequires:	libxt-devel
+BuildRequires:	pkgconfig(xextproto)
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xtst)
+BuildRequires:	pkgconfig(xt)
 
 %description
 This Perl package is intended to facilitate the testing of GUI applications
