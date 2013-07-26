@@ -1,2 +1,4 @@
+removed_sources:
+  X11-GUITest-0.25.tar.gz: 6fe310f4103c45f997e0e90904212257406d7c73
 sources:
-  "X11-GUITest-0.25.tar.gz": 6fe310f4103c45f997e0e90904212257406d7c73
+  X11-GUITest-0.27.tar.gz: 411c98a80340cc510b64214563ac2c8fbda007e0

@@ -1,15 +1,15 @@
 %define upstream_name X11-GUITest
-%define upstream_version 0.25
+%define upstream_version 0.27
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.27
+Release:	1
 
 Summary:	Provides GUI testing/interaction facilities
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/X11/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/X11/X11-GUITest-0.27.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	pkgconfig(xextproto)
@@ -84,4 +84,5 @@ fi
 
 * Tue Jun 30 2009 cpan2dist 0.21-1mdv
 - initial mdv release, generated with cpan2dist
+
 
