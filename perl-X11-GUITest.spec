@@ -1,9 +1,11 @@
 %define upstream_name X11-GUITest
 %define upstream_version 0.27
 
+%define debug_package %{nil}
+
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.27
-Release:	1
+Release:	2
 
 Summary:	Provides GUI testing/interaction facilities
 License:	GPL+ or Artistic
