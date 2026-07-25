@@ -4,14 +4,14 @@
 %define debug_package %{nil}
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Provides GUI testing/interaction facilities
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/X11/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://x11guitest.svn.sourceforge.net/svnroot/x11guitest
+Source0:	https://cpan.metacpan.org/authors/id/C/CT/CTRONDLP/X11-GUITest-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
