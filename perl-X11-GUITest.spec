@@ -1,17 +1,15 @@
 %define upstream_name X11-GUITest
-%define upstream_version 0.28
-
 %define debug_package %{nil}
 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.28
+Release:	5
 
 Summary:	Provides GUI testing/interaction facilities
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://x11guitest.svn.sourceforge.net/svnroot/x11guitest
-Source0:	https://cpan.metacpan.org/authors/id/C/CT/CTRONDLP/X11-GUITest-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CT/CTRONDLP/X11-GUITest-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ applications; which have been built upon the X library or toolkits (i.e.,
 GTK+, Xt, Qt, Motif, etc.) that "wrap" the X library's functionality.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
